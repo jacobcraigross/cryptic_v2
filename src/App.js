@@ -9,7 +9,7 @@ import axios from 'axios';
 
 function App() {
   // common pattern 
-  const [coins, setCoins] = useState([])
+  const [coins, setCoins] = useState([]);
 
   // useEffect for the Axios / coingecko API / .then for the promise after 
   useEffect(() => {
@@ -21,16 +21,20 @@ function App() {
     .catch(error => console.log(error));
   }, []);
 
+
+  // about to start creating the JSX video ends at 13:11 !!!!!!!
   return (
-    <div className="App">
-      <h1>Coingecko API</h1>
+    <div className="coin-app">
+      <div className="coin-search">
+        <h1 className="coin-text">search a currency</h1>
+        <form>
+          <input type="text" placeholder="search" className="coin-input"/>
+        </form>
+      </div>
+      
     </div>
   );
 }
 
 export default App;
 
-
-// also install axios (npm install axios)
-// API from Coin Gecko 
-// 
